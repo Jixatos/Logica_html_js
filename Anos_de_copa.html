@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+<script>
+
+	function pulaLinha(){
+		document.write("<br>");
+	}
+	function mostra(text){
+		document.write(text);
+		pulaLinha();
+	}
+	
+	var anoCopa = 1930;
+	var anoAtual = parseInt(prompt("Em que ano estamos?"));
+	
+	document.write("Os anos de copa foram ");
+	while(anoCopa <= anoAtual) {
+		document.write(anoCopa + ", ");
+		anoCopa = anoCopa + 4;
+	}
+
+	mostra("fim!");
+</script>

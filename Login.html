@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<script>
+
+	var usuarioCadastrado = ("Jixatos");
+	var senhaCadastrada = 110804;
+	
+	var tentativaAtual = 1;
+	var maximoTentativa = 3;
+	
+	while(tentativaAtual <= maximoTentativa){
+	
+		var usuarioRegistrado = prompt("Digite seu usuário");
+		var senhaRegistrada = prompt("Digite sua senha");
+		
+		if(usuarioRegistrado == usuarioCadastrado && senhaRegistrada == senhaCadastrada){
+			
+			alert("Seja bem-vindo ao sistema");
+			tentativaAtual = maximoTentativa
+			
+		} else{
+			if(tentativaAtual == 3){
+				
+				alert("Você exedeu o limite de tentativas. Tente novamente após reiniar a página");
+			
+			} else{
+			
+				alert("Usuário ou senha inválidos. Tente novamente!");
+			
+			}
+		}
+	tentativaAtual = tentativaAtual + 1
+	}
+
+</script>

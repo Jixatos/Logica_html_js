@@ -1,0 +1,49 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha(){
+		document.write("<br>");
+	}
+
+	function mostra(text){
+		document.write(text);
+		pulaLinha();
+	}
+	
+	function calculoImc (altura,peso){
+	
+		return peso/(altura * altura);
+		
+	}
+	
+	var nome = prompt("Qual o seu nome?");
+	var alturaInformada = parseFloat(prompt(nome + ", Informe sua altura."));
+	var pesoInformado = parseInt(prompt(nome + ", Informe seu peso."))	;
+	
+	var imc = calculoImc(alturaInformada, pesoInformado);
+	
+	mostra(nome + " o seu IMC é: " + imc);
+	
+	if(imc < 18.5){
+		mostra(nome + " seu IMC é classificado como: abaixo do peso normal");
+	}
+	if(imc >= 18.5 && imc <= 24.5){
+		mostra(nome + " seu IMC é classificado como: peso normal");
+		}
+	if(imc >= 25 && imc <= 29.9){
+		mostra(nome + " seu IMC é classificado como: excesso de peso");
+	}
+	if(imc >= 30 && imc <= 34.9){
+		mostra(nome + "	seu IMC é classificado como: obesidade classe I");
+	}
+	if(imc >= 35 && imc <= 39.9){
+		mostra(nome +" seu IMC é classificado como: obesidade classe II");
+	}
+	if(imc >= 40){
+		mostra(nome + " IMC é classsificado como: besidade classe III");
+	}
+	
+
+	
+</script>

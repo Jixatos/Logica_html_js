@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+<script>
+
+	function pulaLinha(){
+		document.write("<br><br>");
+	}
+
+	function mostra(text){
+		document.write(text);
+		pulaLinha();
+	}
+	
+	var vitorias = parseInt(prompt("Entre com o número de vitórias."));
+	var empates = parseInt(prompt("Entre com o número de empates."));
+	var derrotas = parseInt(prompt("Entre com o números de derrotas."));
+	
+	var pontos = (vitorias * 2 + empates) - (derrotas * 2);	
+	
+	mostra("O número de pontos do seu time é de: " + pontos);
+	
+	if(pontos > 0){
+		mostra("Parabéns, seu time está com um resultado positivo.");
+		}
+	if(pontos < 0){
+		mostra("Eita! Cuidado, seu time não está com um resultando bom.");
+		}
+	if(pontos == 0){
+		mostra("Seu time não está tão bem, porém, não está negativo. Podem melhorar!");
+		}
+		
+	mostra("FIM");
+ </script>
